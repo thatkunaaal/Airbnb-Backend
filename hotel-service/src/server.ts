@@ -24,11 +24,11 @@ app.use(genricErrorHandler);
 
 app.listen(PORT, async () => {
   try {
-    console.log(`Server is up and running on port: ${PORT}`);
     logger.info(`Server is up and running on port: ${PORT}`);
 
     await sequelize.authenticate();
     logger.info("DB connection has been established successfull!y.");
+
 
   } catch (error) {
     logger.error("Error while connecting database: ",error);
