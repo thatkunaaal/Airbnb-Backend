@@ -10,7 +10,7 @@ export const validateBody = (schema: ZodObject) => {
 
       next();
     } catch (error) {
-
+      
       throw new AppError(StatusCodes.BAD_REQUEST,"Bad Request");
 
       // return res.status(400).json({
